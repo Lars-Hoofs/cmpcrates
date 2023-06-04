@@ -1,0 +1,4 @@
+name: cmpcrates
+version: '${project.version}'
+main: lars.devop.cmpcrates.Cmpcrates
+api-version: 1.19
