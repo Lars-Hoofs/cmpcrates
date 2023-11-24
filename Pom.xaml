@@ -1,0 +1,29 @@
+    <form action="{{ route('store') }}" method="POST">
+
+
+        <main>
+        <h1>{{$stelling->title}}</h1>
+        <article>{{$stelling->beschrijving}}</article>
+    
+        <h2>Opties</h2>
+        <ul>
+            <form action="" method="post">
+                @csrf
+                <div class="form-qs">
+                    @forelse ($stelling->opties as $optie)
+                    <li><input type="radio">{{$optie->optie}}</li>
+                    @empty
+                    <li>Geen opties beschikbaar</li>
+                    <input type="checkbox" name="" id="">
+        
+                    @endforelse
+        
+                </div>
+                <p>Ga akkoord met onze <a href="">Algemenen voorwaarden</a>. <br> Door Akkoord te gaan met onze voorwaarden kunt u uw 'Stem' uitbrengen</p>
+                <input type="submit" name="" id="" value="verzend">
+            </form>
+        </ul>
+    </main>
+
+
+    

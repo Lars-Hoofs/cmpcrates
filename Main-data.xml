@@ -1,0 +1,10 @@
+    <script>
+                    document.getElementById('maakOptie').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        var newDiv = document.createElement('div');
+                        newDiv.innerHTML = '<input type="text" name="opties[]" value="Optie">';
+                        document.querySelector('.div-add').appendChild(newDiv);
+                    });
+                </script>
+
+
